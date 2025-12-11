@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio: Augusto Gaite</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Inter Font -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    /* Estilo custom para el gradiente de fondo en el body */
+    .bg-gradient-custom {
+      background: linear-gradient(135deg, #0f0f10 0%, #1a1a1d 100%);
+    }
+    /* Filtro para invertir colores (hacer logos oscuros visibles en fondos oscuros) */
+    .invert-logo {
+      filter: invert(100%);
+    }
+  </style>
+  <script>
+    // Configuración de Tailwind para colores y sombreado
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary': '#3b82f6', // Azul principal
+            'secondary': '#1f1f22', // Fondo de tarjetas
+          },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gradient-custom text-gray-200 min-h-screen">
+
+  <!-- HERO SECTION: Presentación Principal (Altura aumentada a h-[75vh]) -->
+  <section class="relative w-full h-[75vh] flex flex-col justify-end items-center text-center p-4 overflow-hidden rounded-b-3xl shadow-xl">
+    <!-- Background Image with Overlay -->
+    <div 
+      class="absolute inset-0 bg-cover bg-center" 
+      style="background-image:url('https://images.unsplash.com/photo-1529101091764-c3526daf38fe?auto=format&fit=crop&w=1500&q=80');"
+    ></div>
+    <!-- Dark Gradient Overlay for Readability -->
+    <div class="absolute inset-0 bg-gradient-to-t from-gray-900/90 to-blue-900/60 backdrop-blur-sm"></div>
+
+    <div class="relative z-10 p-4 pt-12">
+      <!-- Título -->
+      <h1 class="text-5xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight mb-1" style="text-shadow: 0 4px 10px rgba(0,0,0,0.5);">
+        Augusto Gaite
+      </h1>
+      <h2 class="text-lg sm:text-xl font-light text-blue-300 mb-4 uppercase tracking-wider">
+        Programador
+      </h2>
+      <!-- Texto Actualizado según la sección "Acerca de Mí" del CV -->
+      <p class="max-w-xl mx-auto text-base text-gray-300 leading-relaxed mb-6">
+        Soy un estudiante de Desarrollo de Software en el tercer, último año de la carrera, disfruto programar y aprender sobre lenguajes de programación. Estoy siempre abierto a aprender sobre nuevas herramientas y lenguajes en el mundo de la programación.
+      </p>
+      
+      <!-- Botón destacado. El 'href="#proyectos"' es clave para el scroll suave -->
+      <a href="#proyectos" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-primary hover:bg-blue-600 transition duration-300 shadow-xl shadow-blue-500/30">
+        Ver Proyectos
+      </a>
+      
+      <!-- ICONOS DE TECNOLOGÍA PRINCIPALES (Movidos dentro del Hero y estilizados) -->
+      <div class="mt-8 flex justify-center space-x-6 pb-6">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="48" alt="JavaScript Logo" class="opacity-80 hover:opacity-100 transition duration-300">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="48" alt="Python Logo" class="opacity-80 hover:opacity-100 transition duration-300">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" width="48" alt="PHP Logo" class="opacity-80 hover:opacity-100 transition duration-300">
+          <!-- GitHub CON 'invert-logo' para ser blanco -->
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="48" alt="GitHub Logo" class="opacity-80 hover:opacity-100 transition duration-300 invert-logo">
+      </div>
+    </div>
+  </section>
+
+  <main class="max-w-5xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+    
+    <!-- SECCIÓN 1: EDUCACIÓN Y EXPERIENCIA PROFESIONAL (Estructura revertida) -->
+    <section class="mb-12">
+      <h3 class="text-3xl font-bold text-white mb-6 border-b-2 border-blue-500 pb-2">
+        Educación & Experiencia
+      </h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        
+        <!-- Tarjeta de EDUCACIÓN (Originalmente la primera tarjeta en el diseño inicial) -->
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-blue-500/30 hover:ring-2 hover:ring-primary/50">
+          <h4 class="text-xl font-semibold text-primary mb-2">
+            Desarrollo de Software
+          </h4>
+          <p class="text-sm text-gray-400 mb-3">2022 - 2025</p>
+          <p class="text-gray-300">
+            Instituto Superior Villa del Rosario.
+          </p>
+        </div>
+        
+        <!-- Tarjeta de EXPERIENCIA LABORAL (Originalmente la segunda tarjeta en el diseño inicial) -->
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-blue-500/30 hover:ring-2 hover:ring-primary/50">
+          <h4 class="text-xl font-semibold text-primary mb-2">
+            Programador Frontend
+          </h4>
+          <p class="text-sm text-gray-400 mb-3">Marzo 2025 - Presente</p>
+          <p class="text-gray-300">
+            Plataforma inteligente de aprendizaje, asistiendo al aprender con tecnologías como inteligencia artificial.
+          </p>
+        </div>
+        
+        <!-- La tarjeta de "Desarrollo de Software Independiente" ha sido removida -->
+        
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE PROYECTOS -->
+    <section class="mb-12" id="proyectos">
+      <h3 class="text-3xl font-bold text-white mb-6 border-b-2 border-blue-500 pb-2">
+        Proyectos Destacados
+      </h3>
+
+      <!-- Proyecto 1: Ajedrez Isométrico (con Iframe) -->
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg mb-6 transition-all duration-300 hover:shadow-blue-500/30">
+        <h4 class="text-2xl font-semibold text-primary mb-3">Ajedrez Isométrico</h4>
+        <p class="text-gray-300 mb-4">
+          Un desafiante proyecto personal desarrollado en JavaScript nativo utilizando HTML5 Canvas, con énfasis en la lógica de movimiento de las piezas y la detección precisa de situaciones de jaque y jaque mate.
+        </p>
+        <div class="w-full aspect-video rounded-lg overflow-hidden border-4 border-gray-700">
+          <iframe 
+            src="https://elkyat.github.io/chess/"
+            title="Previsualización del Ajedrez Isométrico"
+            class="w-full h-full border-none"
+          ></iframe>
+        </div>
+      </div>
+
+      <!-- Proyecto 2: Projecto P-I-E-P (con Imagen Local y Link de GitHub) -->
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg mb-6 transition-all duration-300 hover:shadow-blue-500/30">
+        <h4 class="text-2xl font-semibold text-primary mb-3">Projecto P-I-E-P</h4>
+        <p class="text-gray-300 mb-4">
+          Un proyecto experimental enfocado en el aprendizaje asistido por inteligencia artificial. Utiliza modelos LLM para generar contenido educativo personalizado y seguimiento de progreso.
+        </p>
+        <!-- Enlace (group) que contiene la imagen y el tooltip -->
+        <a href="https://github.com/benjaluduena/Proyecto-P.I.E.P" target="_blank" class="block group cursor-pointer relative">
+          <!-- Contenedor de la imagen con efecto hover de scale (zoom) y altura aumentada a h-96 -->
+          <div class="w-full h-96 bg-gray-900 flex items-center justify-center rounded-lg shadow-inner overflow-hidden transform transition-transform duration-300 group-hover:scale-[1.02]">
+            <!-- Imagen con efecto hover de brightness (oscurecimiento) -->
+            <img 
+              src="PIEP.png" 
+              alt="Vista previa del proyecto PIEP" 
+              class="w-full h-full object-cover transition duration-300 group-hover:brightness-75"
+              onerror="this.onerror=null; this.src='https://placehold.co/800x450/2563eb/ffffff?text=P-I-E-P%20Project%20Preview%20(Local%20Image%20Not%20Found)'"
+            >
+          </div>
+          <!-- TOOLTIP: Aparece centrado en hover -->
+          <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-4 py-2 bg-black/80 text-white text-sm rounded-lg opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none whitespace-nowrap z-20 font-medium tracking-wider">
+            Ir a GitHub
+          </span>
+        </a>
+      </div>
+      
+      <!-- Proyecto 3: Projecto TireTasK (con Imagen Local y Link de GitHub) -->
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg mb-6 transition-all duration-300 hover:shadow-blue-500/30">
+        <h4 class="text-2xl font-semibold text-primary mb-3">Projecto TireTasK</h4>
+        <!-- DESCRIPCIÓN ACTUALIZADA -->
+        <p class="text-gray-300 mb-4">
+          Programa de gestión integral para gomerías, enfocado en proporcionar herramientas de administración de negocios como estadísticas de ventas, control de stock en tiempo real y generación de documentos.
+        </p>
+        <!-- Enlace (group) que contiene la imagen y el tooltip -->
+        <a href="https://github.com/RodrigoLeivaCheikAli/Proyecto_Box" target="_blank" class="block group cursor-pointer relative">
+          <!-- Contenedor de la imagen con efecto hover de scale (zoom) y altura aumentada a h-96 -->
+          <div class="w-full h-96 bg-gray-900 flex items-center justify-center rounded-lg shadow-inner overflow-hidden transform transition-transform duration-300 group-hover:scale-[1.02]">
+            <!-- Imagen con efecto hover de brightness (oscurecimiento) -->
+            <img 
+              src="TTK.png" 
+              alt="Vista previa del proyecto TireTasK" 
+              class="w-full h-full object-cover transition duration-300 group-hover:brightness-75"
+              onerror="this.onerror=null; this.src='https://placehold.co/800x450/22c55e/ffffff?text=TireTasK%20App%20Preview%20(Local%20Image%20Not%20Found)'"
+            >
+          </div>
+          <!-- TOOLTIP: Aparece centrado en hover -->
+          <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-4 py-2 bg-black/80 text-white text-sm rounded-lg opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none whitespace-nowrap z-20 font-medium tracking-wider">
+            Ir a GitHub
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE HABILIDADES & INTERESES -->
+    <section class="mb-12">
+      <h3 class="text-3xl font-bold text-white mb-6 border-b-2 border-blue-500 pb-2">
+        Habilidades & Intereses
+      </h3>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Habilidades Card -->
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+          <h4 class="text-xl font-semibold text-white mb-3">Skills Clave</h4>
+          <ul class="list-disc list-inside space-y-1 text-gray-300 ml-4">
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>NodeJS / ExpressJS</li>
+            <li>SQL Server</li>
+            <li>PHP</li>
+            <li>Diseño Responsivo (Tailwind CSS)</li>
+            <li>Trabajo en Equipo / Autonomía</li>
+          </ul>
+        </div>
+
+        <!-- Tarjeta de Intereses Personales ACTUALIZADA -->
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+          <h4 class="text-xl font-semibold text-white mb-3">Intereses Personales</h4>
+          <ul class="list-disc list-inside space-y-1 text-gray-300 ml-4">
+            <li>Frontend</li>
+            <li>Desarrollo de Juegos</li>
+            <li>Desarrollo Web</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <!-- SECCIÓN DE CONTACTO Y REDES (Separada, ancho completo) -->
+    <section class="mb-12">
+      <h3 class="text-3xl font-bold text-white mb-6 border-b-2 border-blue-500 pb-2">
+        Contacto y Redes
+      </h3>
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+        <p class="text-gray-300 mb-4">¡Conectemos! Estoy siempre abierto a nuevas oportunidades y proyectos interesantes.</p>
+          
+        <!-- Datos de Contacto del CV -->
+        <div class="space-y-3 mt-2 mb-6">
+          <div class="flex items-center gap-3">
+            <span class="text-primary text-xl">📧</span>
+            <a href="mailto:gaiteaugusto1@gmail.com" class="text-gray-300 hover:text-blue-400">gaiteaugusto1@gmail.com</a>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-primary text-xl">📞</span>
+            <p class="text-gray-300">+54 9 3533 447492</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-primary text-xl">📍</span>
+            <p class="text-gray-300">Córdoba, Argentina</p>
+          </div>
+        </div>
+        
+        <!-- Enlaces de Redes -->
+        <div class="flex flex-wrap items-center gap-4 border-t border-gray-700 pt-4">
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/augusto-gaite-338a5a317/" target="_blank" class="flex items-center gap-2 p-2 rounded-full bg-blue-600 hover:bg-blue-700 transition-colors">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="24" alt="LinkedIn">
+            <span class="text-sm font-medium text-white hidden sm:inline">LinkedIn</span>
+          </a>
+          
+          <!-- GitHub -->
+          <a href="https://github.com/Elkyat" target="_blank" class="flex items-center gap-2 p-2 rounded-full bg-gray-700 hover:bg-gray-600 transition-colors">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="24" alt="GitHub">
+            <span class="text-sm font-medium text-white hidden sm:inline">GitHub</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer - AÑO CORREGIDO A 2025 -->
+  <footer class="text-center py-6 border-t border-gray-700 bg-gray-900/50">
+    <p class="text-sm text-gray-500">Diseñado por Augusto Gaite &copy; 2025</p>
+  </footer>
+
+  <!-- JavaScript para Smooth Scroll -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const projectButton = document.querySelector('a[href="#proyectos"]');
+      if (projectButton) {
+        projectButton.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: 'smooth'
+            });
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
